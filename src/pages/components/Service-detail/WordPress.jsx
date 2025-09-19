@@ -211,7 +211,7 @@ const WordPress = () => {
                               {translations[language].wordpress1}
                                 <span className="mt-3 ml-3 relative inline-block">
                                     {translations[language].development}
-                                    <span className="absolute left-0 right-0 -bottom-2 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
+                                    <span className="absolute left-0 right-0 -bottom-5 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
                                 </span>
                             </motion.h1>
 

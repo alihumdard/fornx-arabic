@@ -1,5 +1,94 @@
 const translations = {
-   en: {
+  en: {
+    solutions: "SOLUTIONS",
+    marketing: "MARKETING",
+    development: "DÉVELOPPEMENT",
+    design: "CONCEPTION",
+    // Website Development
+    portfolio1:
+      "Donner du pouvoir aux jeunes esprits avec des expériences d'apprentissage innovantes pour un avenir meilleur",
+    portfolio2: "Site web Kidz Calendar",
+
+    portfolio3:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio4:
+      "Application mobile - Design System - UX/UI Design - Tests utilisateurs - Développement FullStack",
+
+    portfolio5:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio6:
+      "Application mobile - Design System - UX/UI Design - Tests utilisateurs - Développement FullStack",
+
+    portfolio7:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio8:
+      "Application mobile - Design System - UX/UI Design - Tests utilisateurs - Développement FullStack",
+
+    // Mobile Apps
+    portfolio9:
+      "Suya Kabab – Une application mobile moderne pour une commande de nourriture facile",
+    portfolio10: "Application de commande de nourriture",
+
+    portfolio11:
+      "Une application moderne de réservation de services – Accès fluide aux services à portée de main",
+    portfolio12: "Application de réservation de services",
+
+    portfolio13:
+      "Application moderne de gestion des cultures – Donner du pouvoir aux agriculteurs pour de meilleurs rendements",
+    portfolio14: "Application AgriCo",
+
+    portfolio15:
+      "Application de réservation de soignants et de baby-sitters – Des soins fiables à portée de main",
+    portfolio16: "Application de réservation de baby-sitters",
+
+    // WordPress
+    portfolio17:
+      "Donner du pouvoir aux jeunes esprits avec des expériences d'apprentissage innovantes pour un avenir meilleur",
+    portfolio18: "Oracle Force",
+
+    portfolio19:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio20: "Mew School of Leadership",
+
+    portfolio21:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio22: "BiD Lock",
+
+    portfolio23:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio24: "Nom du site web",
+
+    // SEO
+    portfolio25: "Audit SEO",
+    portfolio26: "Audit SEO complet avec améliorations.",
+
+    portfolio27: "Optimisation des mots-clés",
+    portfolio28: "Mots-clés ciblés pour le classement.",
+
+    // UI/UX
+    portfolio29:
+      "Donner du pouvoir aux jeunes esprits avec des expériences d'apprentissage innovantes pour un avenir meilleur",
+    portfolio30: "Wood Mart",
+
+    portfolio31:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio32: "Mettlle",
+
+    portfolio33:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio34: "Faculty",
+
+    portfolio35:
+      "Refonte et déploiement d'une application mobile de plus de 10 ans pour plus de 700k utilisateurs en Belgique en 3 mois",
+    portfolio36: "Nom du site web",
+
+    // Digital Marketing
+    portfolio37: "Campagne sur les réseaux sociaux",
+    portfolio38: "Campagnes publicitaires à fort engagement.",
+
+    portfolio39: "Email Marketing",
+    portfolio40: "Stratégie de tunnel d'emails automatisé.",
+
     wordpress1: "WordPress",
     wordpress2: "Développement WordPress",
     wordpress3: "Conception & Planification",
@@ -1076,6 +1165,93 @@ const translations = {
   },
 
   ur: {
+    solutions: "الحلول",
+    marketing: "التسويق",
+    development: "التطوير",
+    design: "التصميم",
+    // Website Development
+    portfolio1:
+      "تمكين العقول الشابة من خلال تجارب تعليمية مبتكرة لمستقبل أكثر إشراقًا",
+    portfolio2: "موقع Kidz Calendar",
+
+    portfolio3:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio4:
+      "تطبيق موبايل - نظام تصميم - تصميم UX/UI - اختبار المستخدم - تطوير FullStack",
+
+    portfolio5:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio6:
+      "تطبيق موبايل - نظام تصميم - تصميم UX/UI - اختبار المستخدم - تطوير FullStack",
+
+    portfolio7:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio8:
+      "تطبيق موبايل - نظام تصميم - تصميم UX/UI - اختبار المستخدم - تطوير FullStack",
+
+    // Mobile Apps
+    portfolio9: "سويا كباب – تطبيق موبايل حديث لطلب الطعام بسهولة",
+    portfolio10: "تطبيق طلب الطعام",
+
+    portfolio11: "تطبيق حديث لحجز الخدمات – وصول سلس إلى الخدمات في متناول يدك",
+    portfolio12: "تطبيق حجز الخدمات",
+
+    portfolio13:
+      "تطبيق حديث لإدارة المحاصيل – تمكين المزارعين لتحقيق إنتاج أفضل",
+    portfolio14: "تطبيق AgriCo",
+
+    portfolio15:
+      "تطبيق حجز مقدمي الرعاية وجليسات الأطفال – رعاية موثوقة بين يديك",
+    portfolio16: "تطبيق حجز جليسة أطفال",
+
+    // WordPress
+    portfolio17:
+      "تمكين العقول الشابة من خلال تجارب تعليمية مبتكرة لمستقبل أكثر إشراقًا",
+    portfolio18: "Oracle Force",
+
+    portfolio19:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio20: "Mew School of Leadership",
+
+    portfolio21:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio22: "BiD Lock",
+
+    portfolio23:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio24: "اسم الموقع",
+
+    // SEO
+    portfolio25: "تدقيق SEO",
+    portfolio26: "تدقيق كامل لمحركات البحث مع تحسينات.",
+
+    portfolio27: "تحسين الكلمات المفتاحية",
+    portfolio28: "كلمات مفتاحية مستهدفة لتحسين الترتيب.",
+
+    // UI/UX
+    portfolio29:
+      "تمكين العقول الشابة من خلال تجارب تعليمية مبتكرة لمستقبل أكثر إشراقًا",
+    portfolio30: "Wood Mart",
+
+    portfolio31:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio32: "Mettlle",
+
+    portfolio33:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio34: "Faculty",
+
+    portfolio35:
+      "إعادة تصميم وإطلاق تطبيق عمره أكثر من 10 سنوات إلى أكثر من 700 ألف مستخدم في بلجيكا خلال 3 أشهر",
+    portfolio36: "اسم الموقع",
+
+    // Digital Marketing
+    portfolio37: "حملة على وسائل التواصل الاجتماعي",
+    portfolio38: "حملات إعلانية عالية التفاعل.",
+
+    portfolio39: "التسويق عبر البريد الإلكتروني",
+    portfolio40: "استراتيجية قمع بريد إلكتروني آلي.",
+
     notfound: "الصفحة غير موجودة",
     notfound1: "404",
     notfound2: "عفوًا! الصفحة التي تبحث عنها غير موجودة",

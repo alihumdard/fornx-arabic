@@ -194,7 +194,7 @@ const chatbot = () => {
                 <span className="mt-3">{translations[language].aiservice2}</span>
                 <span className="mt-3 ml-3 relative inline-block">
                   {translations[language].aiservice3}
-                  <span className="absolute left-0 right-0 -bottom-2 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
+                  <span className="absolute left-0 right-0 -bottom-5 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></span>
                 </span>
               </motion.h1>
 

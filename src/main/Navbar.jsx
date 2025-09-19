@@ -39,31 +39,30 @@ const Navbar = () => {
   };
 
   const getMobileLinkClasses = (path) =>
-    `px-2 py-2 block w-full ${
-      language === "ur" ? "text-end" : "text-start"
-    } ${
-      location.pathname === path
-        ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA] text-transparent bg-clip-text font-medium"
-        : "text-gray-800 hover:text-blue-600"
+    `px-2 py-2 block w-full ${language === "ur" ? "text-right" : "text-left"
+    } ${location.pathname === path
+      ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA] text-transparent bg-clip-text font-medium"
+      : "text-gray-800 hover:text-blue-600"
     }`;
 
   const getDesktopLinkClasses = (path) => {
     const isActive = location.pathname === path;
     return `
       px-2 py-1 transition-all duration-300 ease-in-out
-      ${
-        isActive
-          ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA] text-transparent bg-clip-text font-semibold border-b-2 border-blue-500"
-          : `${getDesktopTextColor()} hover:text-blue-500`
+      ${isActive
+        ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA] text-transparent bg-clip-text font-semibold border-b-2 border-blue-500"
+        : `${getDesktopTextColor()} hover:text-blue-500`
       }
       hover-underline-animation
     `;
   };
+
   const isRTL = language === "ur";
+
   return (
     <>
       <motion.nav
-        dir={language === "ur" ? "rtl" : "ltr"}  // ✅ RTL/LTR support
+        dir={isRTL ? "rtl" : "ltr"} // ✅ RTL/LTR support
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -100,9 +99,8 @@ const Navbar = () => {
                 aria-label="Toggle menu"
               >
                 <svg
-                  className={`w-6 h-6 transition-colors duration-300 ${
-                    isMobileMenuOpen ? "text-gray-800" : getDesktopTextColor()
-                  }`}
+                  className={`w-6 h-6 transition-colors duration-300 ${isMobileMenuOpen ? "text-gray-800" : getDesktopTextColor()
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -123,16 +121,14 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div
-              className={`hidden lg:flex flex-1 items-center ${
-                language === "ur"
+              className={`hidden lg:flex flex-1 items-center ${isRTL
                   ? "justify-center flex-row-reverse space-x-reverse"
                   : "justify-center"
-              } space-x-6`}
+                } space-x-6`}
             >
               <ul
-                className={`flex ${
-                  language === "ur" ? "flex-row-reverse space-x-reverse" : ""
-                } space-x-4 xl:space-x-8`}
+                className={`flex ${isRTL ? "flex-row-reverse space-x-reverse" : ""
+                  } space-x-4 xl:space-x-8`}
               >
                 <li>
                   <Link to={URLS.HOME} className={getDesktopLinkClasses(URLS.HOME)}>
@@ -171,30 +167,45 @@ const Navbar = () => {
                 </li>
 
                 {/* Language Toggle */}
-              <div className={`flex items-center rounded-full ${isRTL ? "flex-row-reverse" : ""} gap-2`}>
-      <span className={`text-xs font-medium ${getDesktopTextColor()}`}>FR</span>
+                <div
+                  className={`flex items-center rounded-full ${isRTL ? "flex-row-reverse" : ""
+                    } gap-2`}
+                >
+                  <span className={`text-xs font-medium ${getDesktopTextColor()}`}>
+                    FR
+                  </span>
 
-      <button
-        onClick={() => toggleLanguage(language === "en" ? "ur" : "en")}
-        className="relative w-12 h-6 flex-shrink-0 bg-white border border-gray-300 rounded-full p-[2px] transition-colors duration-300"
-        aria-pressed={language === "ur"}
-        aria-label="Toggle language"
-      >
-        {/* handle positioned by left/right instead of translate */}
-        <div className={`absolute top-1/2 -translate-y-1/2 transition-all duration-300 ${isRTL ? "right-1" : "left-1"}`}>
-          <div
-            className={`w-4 h-4 rounded-full transition-colors duration-300 ${language === "ur" ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA]" : "bg-gray-300"}`}
-          />
-        </div>
-      </button>
+                  <button
+                    onClick={() => toggleLanguage(language === "en" ? "ur" : "en")}
+                    className="relative w-12 h-6 flex-shrink-0 bg-white border border-gray-300 rounded-full p-[2px] transition-colors duration-300"
+                    aria-pressed={language === "ur"}
+                    aria-label="Toggle language"
+                  >
+                    <div
+                      className={`absolute top-1/2 -translate-y-1/2 transition-all duration-300 ${isRTL ? "right-1" : "left-1"
+                        }`}
+                    >
+                      <div
+                        className={`w-4 h-4 rounded-full transition-colors duration-300 ${language === "ur"
+                            ? "bg-gradient-to-r from-[#6931CF] to-[#1A61EA]"
+                            : "bg-gray-300"
+                          }`}
+                      />
+                    </div>
+                  </button>
 
-      <span className={`text-xs font-medium ${getDesktopTextColor()}`}>AR</span>
-    </div>
+                  <span className={`text-xs font-medium ${getDesktopTextColor()}`}>
+                    AR
+                  </span>
+                </div>
               </ul>
             </div>
 
             {/* Desktop Right Side Elements */}
-            <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
+            <div
+              className={`hidden lg:flex items-center space-x-6 flex-shrink-0 ${language === "ur" ? "flex-row-reverse space-x-reverse gap-4" : ""
+                }`}
+            >
               <Link
                 to={URLS.SUBMIT}
                 className="btn-animate bg-gradient-to-r from-[#6931CF] to-[#1A61EA] text-white px-5 py-2 rounded-full font-semibold shadow"
@@ -212,6 +223,7 @@ const Navbar = () => {
                 </span>
               </Link>
             </div>
+
           </div>
         </PageWrapper>
       </motion.nav>
@@ -222,11 +234,14 @@ const Navbar = () => {
           <>
             <motion.div
               key="mobile-menu"
-              initial={{ x: language === "ur" ? "100%" : "-100%" }}
+              initial={{ x: isRTL ? "100%" : "-100%" }}
               animate={{ x: "0%" }}
-              exit={{ x: language === "ur" ? "100%" : "-100%" }}
+              exit={{ x: isRTL ? "100%" : "-100%" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed inset-y-0 left-0 w-full max-w-[90vw] bg-white shadow-xl lg:hidden z-[9999] overflow-y-auto p-6 flex flex-col"
+              className={`fixed inset-y-0 ${isRTL ? "right-0" : "left-0"
+                } w-full max-w-[90vw] bg-white shadow-xl lg:hidden z-[9999] overflow-y-auto p-6 flex flex-col ${isRTL ? "text-right" : "text-left"
+                }`}
+              dir={isRTL ? "rtl" : "ltr"}
             >
               <div className="flex justify-end mb-8">
                 <button
@@ -295,7 +310,7 @@ const Navbar = () => {
                 </li>
 
                 {/* Language Toggle */}
-                <li className="flex justify-start mt-auto pt-4">
+                <li className="flex mt-auto pt-4">
                   <div className="flex items-center space-x-2 rounded-full">
                     <span className="text-gray-800 text-xs font-medium">FR</span>
                     <button
@@ -305,11 +320,10 @@ const Navbar = () => {
                       className="w-12 h-6 flex items-center border border-gray-500 bg-white rounded-full px-1 transition-all duration-300"
                     >
                       <div
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                          language === "ur"
+                        className={`w-4 h-4 rounded-full transition-all duration-300 ${language === "ur"
                             ? "translate-x-6 bg-gradient-to-r from-[#6931CF] to-[#1A61EA]"
                             : "translate-x-0 bg-gray-300"
-                        }`}
+                          }`}
                       ></div>
                     </button>
                     <span className="text-gray-800 text-xs font-medium">AR</span>

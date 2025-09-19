@@ -5,49 +5,21 @@ import { Link } from "react-router-dom";
 import translations from "../translations";
 import { useLanguage } from "../LanguageContext";
 import {
-  FaFigma, FaPalette, FaPencilRuler, FaPaintBrush,
+  FaFigma, FaPalette, FaPencilRuler,
   FaRocket, FaRegLightbulb, FaLaptopCode, FaMobileAlt,
-  FaCloudUploadAlt, FaSearch, FaFileAlt, FaRobot,
-  FaUsers,
-  FaDraftingCompass,
-  FaSitemap,
-  FaPlayCircle,
-  FaCubes,
-  FaSyncAlt,
-  FaUsersCog,
+  FaSearch, FaRobot,
   FaProjectDiagram,
   FaCloud,
   FaPlug,
-  FaRedo,
   FaFacebook,
   FaMapMarkedAlt,
   FaEnvelopeOpenText,
   FaPenNib,
-  FaShareAlt,
   FaShoppingCart,
   FaCreditCard,
   FaUserFriends,
   FaTools,
   FaCode,
-  FaServer,
-  FaWordpressSimple,
-  FaReact,
-  FaAppStore,
-  FaGooglePlay,
-  FaCog,
-  FaTachometerAlt,
-  FaExternalLinkAlt,
-  FaDatabase,
-  FaShieldAlt,
-  FaHeadset,
-  FaShopify,
-  FaBrain,
-  FaRegComments,
-  FaBullhorn,
-  FaChartLine,
-  FaGlobe,
-  FaHandshake,
-  FaWrench
 } from "react-icons/fa";
 
 const DropdownMenu = ({ mobile, textColorClass, linkHoverClass, onCloseMobileMenu }) => {
@@ -87,7 +59,7 @@ const DropdownMenu = ({ mobile, textColorClass, linkHoverClass, onCloseMobileMen
   // Menu data with proper linking from the original dropdown
   const menuCategories = [
     {
-      title: "DESIGN",
+      title: translations[language].design,
       url: URLS.SERVICE_DETAIL.UIUX_DEVELOPEMENT,
       items: [
         { 
@@ -121,7 +93,7 @@ const DropdownMenu = ({ mobile, textColorClass, linkHoverClass, onCloseMobileMen
       ]
     },
     {
-      title: "DEVELOPMENT",
+      title: translations[language].development,
       url: URLS.SERVICE_DETAIL.WEB_DEVELOPMENT,
       items: [
         { 
@@ -169,7 +141,7 @@ const DropdownMenu = ({ mobile, textColorClass, linkHoverClass, onCloseMobileMen
       ]
     },
     {
-      title: "MARKETING",
+      title: translations[language].marketing,
       url: URLS.SERVICE_DETAIL.DIGITAL_MARKITING,
       items: [
         { 
@@ -219,7 +191,7 @@ const DropdownMenu = ({ mobile, textColorClass, linkHoverClass, onCloseMobileMen
   ];
 
   const solutionsCategory = {
-    title: "SOLUTIONS",
+    title: translations[language].solutions,
     items: [
       { 
         label: translations[language].drop6, 
