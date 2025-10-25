@@ -391,12 +391,12 @@ const Contact = () => {
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-                    ✅ Message sent successfully! We'll get back to you soon.
+                     Message sent successfully! We'll get back to you soon.
                   </div>
                 )}
                 {submitStatus === 'error' && (
                   <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                    ❌ Failed to send message. Please try again or contact us directly.
+                   Failed to send message. Please try again or contact us directly.
                   </div>
                 )}
 

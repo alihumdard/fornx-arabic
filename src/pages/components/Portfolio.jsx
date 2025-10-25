@@ -13,8 +13,7 @@ const portfolioCategories = (language) => [
   { id: "ui-ux-design", name: translations[language].service3 },
 ];
 
-// 🔹 Data definitions
-// ✅ This is now a function that depends on language
+//  This is now a function that depends on language
 const websiteDevelopmentData = (language) => [
   { id: "w1", image: "/images/w1.png", title: translations[language].portfolio1, description: translations[language].portfolio2, category: "website-development" },
   { id: "w2", image: "/images/w2.png", title: translations[language].portfolio3, description: translations[language].portfolio4, category: "website-development" },
@@ -22,7 +21,7 @@ const websiteDevelopmentData = (language) => [
   { id: "w4", image: "/images/w4.png", title: translations[language].portfolio7, description:  translations[language].portfolio8, category: "website-development" },
 ];
 
-// ✅ These are static and can stay outside
+//  These are static and can stay outside
 const mobileAppData = (language) => [
   { id: "m1", image: "/images/m1.png", title:  translations[language].portfolio9, description:  translations[language].portfolio10, category: "mobile-app-development" },
   { id: "m2", image: "/images/m2.png", title: translations[language].portfolio11, description:translations[language].portfolio12, category: "mobile-app-development" },
@@ -58,10 +57,10 @@ const digitalMarketingData = (language) => [
 const Portfolio = () => {
   const { language } = useLanguage();
 
-  // ✅ Call functions that depend on language INSIDE the component
+  // Call functions that depend on language INSIDE the component
   const currentPortfolioCategories = portfolioCategories(language);
 
-  // ✅ Assemble the complete portfolio data INSIDE the component
+  // Assemble the complete portfolio data INSIDE the component
   const portfolioData = [
     ...websiteDevelopmentData(language), // Call the function here
     ...mobileAppData(language),

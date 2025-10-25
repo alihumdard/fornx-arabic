@@ -15,7 +15,7 @@ export const LanguageProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("language", language);
 
-    // ✅ Update document direction (LTR for English, RTL for Urdu)
+    //  Update document direction (LTR for English, RTL for Urdu)
     document.documentElement.setAttribute("dir", language === "ur" ? "rtl" : "ltr");
   }, [language]);
 

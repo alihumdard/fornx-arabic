@@ -4,7 +4,7 @@ import PageWrapper from "../../main/Pagewraper";
 import translations from "../../translations";
 import { useLanguage } from "../../LanguageContext";
 import URLS from "../../config/urls.config";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom"; 
 
 // Icons
 // It's generally better to define icons as components or use react-icons
@@ -130,7 +130,7 @@ const serviceImages = {
 const servicesData = (language) => [
   {
     id: "web-dev",
-    url: URLS.SERVICE_DETAIL.WEB_DEVELOPMENT, // ✅ Correct URL
+    url: URLS.SERVICE_DETAIL.WEB_DEVELOPMENT, 
     iconKey: "webDevelopment",
     imageKey: "webDevelopment",
     title: translations[language].what3,
@@ -138,7 +138,7 @@ const servicesData = (language) => [
   },
   {
     id: "ecommerce",
-    url: URLS.SERVICE_DETAIL.ECOMMERCE_DEVELOPMENT, // ✅ Added missing URL
+    url: URLS.SERVICE_DETAIL.ECOMMERCE_DEVELOPMENT,
     iconKey: "eCommerce",
     imageKey: "eCommerce",
     title: translations[language].what4,
@@ -146,7 +146,7 @@ const servicesData = (language) => [
   },
   {
     id: "mobile-app",
-    url: URLS.SERVICE_DETAIL.APP_DEVELOPMENT, // ✅ Added missing URL
+    url: URLS.SERVICE_DETAIL.APP_DEVELOPMENT, 
     iconKey: "mobileApplication",
     imageKey: "mobileApplication",
     title: translations[language].what5,
@@ -154,7 +154,7 @@ const servicesData = (language) => [
   },
   {
     id: "digital-marketing",
-    url: URLS.SERVICE_DETAIL.DIGITAL_MARKITING, // ✅ Added missing URL
+    url: URLS.SERVICE_DETAIL.DIGITAL_MARKITING,
     iconKey: "digitalMarketing",
     imageKey: "digitalMarketing",
     title: translations[language].what6,
@@ -162,7 +162,7 @@ const servicesData = (language) => [
   },
   {
     id: "content-writing",
-    url: URLS.SERVICE_DETAIL.MAINTENENCE, // ✅ Added missing URL
+    url: URLS.SERVICE_DETAIL.MAINTENENCE, 
     iconKey: "contentWriting",
     imageKey: "contentWriting",
     title: translations[language].what7,
@@ -170,7 +170,7 @@ const servicesData = (language) => [
   },
   {
     id: "graphics-design",
-    url: URLS.SERVICE_DETAIL.UIUX_DEVELOPEMENT, // ✅ Added missing URL
+    url: URLS.SERVICE_DETAIL.UIUX_DEVELOPEMENT,
     iconKey: "graphicsDesign",
     imageKey: "graphicsDesign",
     title: translations[language].what8,
@@ -184,7 +184,7 @@ const ServiceCard = ({
   title,
   description,
   imageSrc,
-  serviceUrl, // ✅ Added serviceUrl prop
+  serviceUrl,
 }) => {
   return (
     <motion.div
@@ -198,7 +198,7 @@ const ServiceCard = ({
       <div className="flex justify-between items-center mb-5">
         <div className="w-12 h-12 text-indigo-600">{icon}</div>
 
-        {/* ✅ Converted to Link for proper navigation */}
+        {/* Converted to Link for proper navigation */}
         <Link
           to={serviceUrl}
           className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 group-hover:bg-indigo-100 shadow transition-all duration-300 ease-in-out transform"
@@ -287,7 +287,7 @@ const WhatWeDo = () => {
                 title={service.title}
                 description={service.description}
                 imageSrc={serviceImages[service.imageKey]}
-                serviceUrl={service.url} // ✅ Passing the URL as a prop
+                serviceUrl={service.url}
               />
             ))}
           </div>

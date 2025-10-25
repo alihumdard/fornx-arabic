@@ -151,7 +151,7 @@ const OveronsAccess = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
-  dir={language === "ur" ? "rtl" : "ltr"} // ✅ dynamic direction
+  dir={language === "ur" ? "rtl" : "ltr"} //  dynamic direction
 >
   <div className="relative flex flex-col lg:flex-row items-stretch rounded-xl overflow-hidden max-w-6xl w-full">
     {/* Left Image */}
@@ -161,7 +161,7 @@ const OveronsAccess = () => {
         alt="Collaboration"
         className={`w-full h-full object-cover ${
           language === "ur" ? "lg:rounded-r-xl" : "lg:rounded-l-xl"
-        }`} // ✅ Urdu میں rounded opposite طرف ہوگا
+        }`} //  Urdu میں rounded opposite طرف ہوگا
         style={{ minHeight: "400px" }}
       />
     </div>
